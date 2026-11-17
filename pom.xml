@@ -6,8 +6,8 @@
 
   <!-- Project coordinates: -->
   <!-- a small test program that uses the existing client. -->
-  <groupId>tools.vitruviusmcp.client</groupId>
-  <artifactId>tools.vitruviusmcp.client</artifactId>
+  <groupId>tools.vitruviusmcp</groupId>
+  <artifactId>tools.vitruvius-mcp</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
