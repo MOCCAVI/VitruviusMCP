@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Project coordinates: -->
+  <!-- a small test program that uses the existing client. -->
+  <groupId>tools.vitruviusmcp.client</groupId>
+  <artifactId>tools.vitruviusmcp.client</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Vitruvius MCP</name>
+  <description>MCP server giving LLM agents tool-based access to a Vitruvius V-SUM via Vitruv-Server</description>
+
+  <properties>
+    <!-- Must match the Java version your template project builds with -->
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- One version for everything Vitruvius-related -->
+    <vitruv.version>4.0.3-SNAPSHOT</vitruv.version>
+  </properties>
+
+  <dependencies>
+    <!-- Vitruv-Server client library: VitruvClient, VitruvClientFactory, remote views -->
+    <dependency>
+      <groupId>tools.vitruv</groupId>
+      <artifactId>tools.vitruv.server.remote</artifactId>
+      <version>${vitruv.version}</version>
+    </dependency>
+
+    <!-- TODO (Task 2): your template's generated model classes (System, Component, Entity, ...).
+         Copy groupId / artifactId / version from the model module's pom.xml in your template project.
+    <dependency>
+      <groupId>TEMPLATE_GROUP_ID</groupId>
+      <artifactId>TEMPLATE_MODEL_ARTIFACT_ID</artifactId>
+      <version>TEMPLATE_VERSION</version>
+    </dependency>
+    -->
+  </dependencies>
+
+  <repositories>
+    <!-- Same as Vitruv-Server: allows resolving snapshot dependencies not installed locally -->
+    <repository>
+      <id>ossrh-snapshots</id>
+      <name>OSSRH Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
+</project>
