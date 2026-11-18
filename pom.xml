@@ -21,6 +21,9 @@
 
     <!-- One version for everything Vitruvius-related -->
     <vitruv.version>4.0.3-SNAPSHOT</vitruv.version>
+
+    <!-- Version of your Methodologist-template project (its root pom.xml) -->
+    <template.version>0.1.0-SNAPSHOT</template.version>
   </properties>
 
   <dependencies>
@@ -31,14 +34,14 @@
       <version>${vitruv.version}</version>
     </dependency>
 
-    <!-- TODO (Task 2): your template's generated model classes (System, Component, Entity, ...).
-         Copy groupId / artifactId / version from the model module's pom.xml in your template project.
+    <!-- Template's generated model classes (model: System, Component, ...; model2: Root, Entity, ...).
+         Needed so the client can turn the server's JSON back into EMF objects.
+         Must match the groupId/artifactId/version of the model module in YOUR template project. -->
     <dependency>
-      <groupId>TEMPLATE_GROUP_ID</groupId>
-      <artifactId>TEMPLATE_MODEL_ARTIFACT_ID</artifactId>
-      <version>TEMPLATE_VERSION</version>
+      <groupId>tools.vitruv</groupId>
+      <artifactId>tools.vitruv.methodologisttemplate.model</artifactId>
+      <version>${template.version}</version>
     </dependency>
-    -->
   </dependencies>
 
   <repositories>
